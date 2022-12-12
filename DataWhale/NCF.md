@@ -34,7 +34,7 @@ or Probit function) as the activation function for the output layer. With the ab
     Let the user latent vector $p_{u}$ be $P^{T}v_{u}^{U}$ and item latent vector $q_{i}$ be $Q^{T}v_{i}^{I}$. We define the mapping function of the first neural CF layer as:
     $$\phi_{1}(p_{u}, q_{i}) = p_{u} \otimes q_{i}$$
     where $\otimes$ denotes the element-wise products of vectors. The project the vector to the output layer:
-    $$\hat{y}\_{ui} = a_{out}(h^{T}(p_{u}\otimesq_{i}))$$
+    $$\hat{y}\_{ui} = a_{out}(h^{T}(p_{u}\otimes q_{i}))$$
     where $a_{out}$ and $h$ denote the activation and edge weights of the output layer.  
     Intuitively, if we use an identity function for $a_{out}$ and enforce $h$ to be a uniform vector of 1, we can exactly recover the MF model. So we say that MF can be interpreted as a special case of NCF framework. And we term this model as GMF, short for *Generalized Matrix Factorization*.
     
