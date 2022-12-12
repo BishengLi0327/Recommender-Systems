@@ -36,8 +36,10 @@ or Probit function) as the activation function for the output layer. With the ab
     
     Since NCF adopts two pathways to model users and items, it is intuitive to combine the features of two pathways by concatenating them. However, simple concatenation is insufficient for modeling the collaborative filtering effect.
     $$
-    z_{1} = \Phi_{1}(p_{u}, q_{i})\\\\
-    ...
+    \begin{equation}
+    f_1(x) \\
+    f_2(x) \notag
+    \end{equation}
     $$
 
 4. Fusion of GMF and MLP
