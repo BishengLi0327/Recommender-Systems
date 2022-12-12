@@ -14,6 +14,8 @@ on neural networks.
 1. General Framework
     The framework is illustrated in the above figure.  
     The total pipeline is: **Input Layer $\rightarrow$ Embedding Layer $\rightarrow$ Neural CF Layers $\rightarrow$ Output Layer**
+    The NCF preictive model can be formulated as:
+    $$\hat{y}_{ui}$$
     1. *Learning NCF*
 2. Genealized Matrix Factorization(GMF)
 3. Multi-Layer Perceptron(MLP)
