@@ -35,11 +35,11 @@ or Probit function) as the activation function for the output layer. With the ab
 3. Multi-Layer Perceptron(MLP)
 
     $$
-    \begin{align}
+    \begin{eqaution}
     z_{1} = \Phi_{1}(p_{u}, q_{i}) \\
     \Phi_{2}(z_{1}) = a_2(W^{T}\_{2} z_{1} + b_{2}) \\
     \cdots \cdots
-    \end{align}
+    \end{equation}
     $$
     
 4. Fusion of GMF and MLP
