@@ -34,7 +34,7 @@ or Probit function) as the activation function for the output layer. With the ab
     
 3. Multi-Layer Perceptron(MLP)
     
-    Since NCF adopts two pathways to model users and items, it is intuitive to combine the features of two pathways by concatenating them. However, simple concatenation is insufficient for modeling the collaborative filtering effect.
+    Since NCF adopts two pathways to model users and items, it is intuitive to combine the features of two pathways by concatenating them. However, simple concatenation is insufficient for modeling the collaborative filtering effect.  
     $$
     \begin{equation}
     f_1(x) \\
