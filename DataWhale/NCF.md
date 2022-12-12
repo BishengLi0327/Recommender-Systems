@@ -13,9 +13,9 @@ on neural networks.
 **Neural Collaborative Filtering**
 1. General Framework
     The framework is illustrated in the above figure.  
-    The total pipeline is: **Input Layer $\rightarrow$ Embedding Layer $\rightarrow$ Neural CF Layers $\rightarrow$ Output Layer**
+    The total pipeline is: **Input Layer $\rightarrow$ Embedding Layer $\rightarrow$ Neural CF Layers $\rightarrow$ Output Layer**  
     The NCF preictive model can be formulated as:
-    $$\hat{y}_{ui}$$
+    $$\hat{y}_{ui} = f(P^{T} v_{u}^{U}, Q^{T} v_{i}^{I} | P, Q, \Theta_{f})$$
     1. *Learning NCF*
 2. Genealized Matrix Factorization(GMF)
 3. Multi-Layer Perceptron(MLP)
