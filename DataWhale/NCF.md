@@ -65,3 +65,8 @@ or Probit function) as the activation function for the output layer. With the ab
 
 
 **Experiments**
+
+RQ1: Do the proposed NCF methods outperform the state-of-the-art implicit collaborative filtering methods?
+<img width="594" alt="image" src="https://user-images.githubusercontent.com/49403324/207029662-d3db0763-93c9-4c4e-a565-49e300714734.png">
+
+RQ2: How does the proposed optimization framework (log loss with negative sampling) work for the recommendation task?
