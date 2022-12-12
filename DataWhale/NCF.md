@@ -18,9 +18,11 @@ on neural networks.
     $$\hat{y}\_{ui}=f(P^{T} v_{u}^{U}, Q^{T} v_{i}^{I} | P, Q, \Theta_{f})$$
     where $P \in \mathbb{R}^{M \times K}$ and $Q \in \mathbb{R}^{N \times K}$, denoting the latent factor matrix for users and items, respectively; and $\Theta_{f}$ denotes the model parameters of the interaction function $f$.
     1. *Learning NCF*  
-        to learn model parameters, existing pointwise methods largely perform a regression with squared loss:
+        To learn model parameters, existing pointwise methods largely perform a regression with squared loss:
         $$L_{sqr} = \sum_{(u,i) \in \mathcal{Y} \times \mathcal{Y}^{-}}$$
-        where $\mathcal{Y}$ denotes the set of observed interactions in **Y**, and $\mathcal{Y}^{-}$ denotes the set of negative instances, which can be all (or sampled from) unobserved interactions;
+        where $\mathcal{Y}$ denotes the set of observed interactions in **Y**, and $\mathcal{Y}^{-}$ denotes the set of negative instances, which can be all (or sampled from) unobserved interactions;  
+        We can view the prediction score $\hat{y}\_{ui}$ as how likely $i$ is relevant to $u$. To endow NCF with such a probabilistic explanation, we need to constrain the output $\hat{y}\_{ui}$ in the range of $\[0, 1\]$, which can be easily achieved by using a probabilistic function (e.g., the Logistic
+or Probit function) as the activation function for the output layer. 
 2. Genealized Matrix Factorization(GMF)
 3. Multi-Layer Perceptron(MLP)
 4. Fusion of GMF and MLP
