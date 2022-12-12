@@ -18,6 +18,8 @@ on neural networks.
     $$\hat{y}\_{ui}=f(P^{T} v_{u}^{U}, Q^{T} v_{i}^{I} | P, Q, \Theta_{f})$$
     where $P \in \mathbb{R}^{M \times K}$ and $Q \in \mathbb{R}^{N \times K}$, denoting the latent factor matrix for users and items, respectively; and $\Theta_{f}$ denotes the model parameters of the interaction function $f$.
     1. *Learning NCF*
+        to learn model parameters, existing pointwise methods largely perform a regression with squared loss:
+        $$L_{sqr} = \sum_{(u,i) \in \mathcal{Y} \times Y}$$
 2. Genealized Matrix Factorization(GMF)
 3. Multi-Layer Perceptron(MLP)
 4. Fusion of GMF and MLP
