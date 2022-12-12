@@ -20,7 +20,7 @@ on neural networks.
     1. *Learning NCF*
         to learn model parameters, existing pointwise methods largely perform a regression with squared loss:
         $$L_{sqr} = \sum_{(u,i) \in \mathcal{Y} \times \mathcal{Y}^{-}}$$
-        where $\nmathcal{Y}$ denotes the set of observed interactions in **Y**, and $\mathcal{Y}^{-}$ denotes the set of negative instances, which can be all (or sampled from) unobserved interactions;
+        where $\mathcal{Y}$ denotes the set of observed interactions in **Y**, and $\mathcal{Y}^{-}$ denotes the set of negative instances, which can be all (or sampled from) unobserved interactions;
 2. Genealized Matrix Factorization(GMF)
 3. Multi-Layer Perceptron(MLP)
 4. Fusion of GMF and MLP
