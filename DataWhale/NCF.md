@@ -33,11 +33,9 @@ or Probit function) as the activation function for the output layer. With the ab
     MF can be interpreted as a special case of NCF framework.
     
 3. Multi-Layer Perceptron(MLP)
-
     $$
     z_{1} = \Phi_{1}(p_{u}, q_{i}) \\
     \Phi_{2}(z_{1}) = a_2(W^{T}\_{2} z_{1} + b_{2}) \\
     \cdots \cdots
     $$
-    
 4. Fusion of GMF and MLP
