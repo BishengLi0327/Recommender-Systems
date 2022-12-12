@@ -16,6 +16,7 @@ on neural networks.
     The total pipeline is: **Input Layer $\rightarrow$ Embedding Layer $\rightarrow$ Neural CF Layers $\rightarrow$ Output Layer**  
     The NCF preictive model can be formulated as:
     $$\hat{y}\_{ui}=f(P^{T} v_{u}^{U}, Q^{T} v_{i}^{I} | P, Q, \Theta_{f})$$
+    where $P \in \mathbb{R}^{M \times K}$
     1. *Learning NCF*
 2. Genealized Matrix Factorization(GMF)
 3. Multi-Layer Perceptron(MLP)
