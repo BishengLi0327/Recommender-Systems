@@ -37,7 +37,7 @@ or Probit function) as the activation function for the output layer. With the ab
     Since NCF adopts two pathways to model users and items, it is intuitive to combine the features of two pathways by concatenating them. However, simple concatenation is insufficient for modeling the collaborative filtering effect.  
     $$
     \begin{equation}
-    f_1(x) \\
+    f_1(x)\n
     f_2(x) \notag
     \end{equation}
     $$
