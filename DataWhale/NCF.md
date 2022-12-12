@@ -78,3 +78,14 @@ or Probit function) as the activation function for the output layer. With the ab
 
 <img width="337" alt="image" src="https://user-images.githubusercontent.com/49403324/207031322-ad13f8b5-a6cc-4e87-acbe-daaf5f17cba5.png"><img width="339" alt="image" src="https://user-images.githubusercontent.com/49403324/207031367-64faaec4-1a0c-4eb9-bc81-ac6d3aed6a3d.png">
 
+
+**Citation**
+```
+@inproceedings{he2017neural,
+  title={Neural collaborative filtering},
+  author={He, Xiangnan and Liao, Lizi and Zhang, Hanwang and Nie, Liqiang and Hu, Xia and Chua, Tat-Seng},
+  booktitle={Proceedings of the 26th international conference on world wide web},
+  pages={173--182},
+  year={2017}
+}
+'''
