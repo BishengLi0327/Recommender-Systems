@@ -9,3 +9,10 @@ on neural networks.
 
 **NCF Framework**:  
 <img width="458" alt="image" src="https://user-images.githubusercontent.com/49403324/206973238-1752e378-2b19-44ad-b594-242f80b36bfc.png">
+
+**Neural Collaborative Filtering**
+1. General Framework
+  The general framework is illustrated in the above figure.
+  1. Learning NCF
+2. Generalized Matrix Factorization
+3. Multi-Layer Perceptron 
