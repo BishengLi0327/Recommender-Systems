@@ -2,13 +2,16 @@
 https://arxiv.org/pdf/1708.05031.pdf
 ##### *2017 International World Wide Web Conference*
 
+
 **Main Contribution**: 
 1. This paper presents a neural network architecture to model latent features of users and items and devise a general framework NCF for collaborative filtering based
 on neural networks.
 2. This paper shows that MF can be interpreted as a specialization of NCF and utilize a multi-layer perceptron to endow NCF modelling with a high level of non-linearities.
 
+
 **NCF Framework**:  
 <img width="458" alt="image" src="https://user-images.githubusercontent.com/49403324/206973238-1752e378-2b19-44ad-b594-242f80b36bfc.png">
+
 
 **Neural Collaborative Filtering**
 1. General Framework
@@ -59,3 +62,6 @@ or Probit function) as the activation function for the output layer. With the ab
     $$\phi^{MLP} = a_{L}(W_{L}^{T}(a_{L-1}(\cdots a_{2}(W_{2}^{T} \[(p_{u}^{M})^{T}, (q_{i}^{M})^{T}\]^{T} + b)\_{2})\cdots))+b_{L})$$
     $$\hat{y}\_{ui} = \sigma(h^{T} \[(\phi^{GMF})^{T}, (\phi^{MLP})^{T}\]^{T})$$
     where $p_{u}^{G}$ and $p_{u}^{M}$ denote the user embedding for GMF and MLP parts, and so as $q_{i}^{G}$ and $q_{i}^{M}$. The model combines the linearity of MF and non-linearity of DNNs for modeling user–item latent structures and is named as "NeuMF", short for *Neural Matrix Factorization*.
+
+
+**Experiments**
