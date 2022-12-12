@@ -12,7 +12,9 @@ on neural networks.
 
 **Neural Collaborative Filtering**
 1. General Framework
-  1. *Learning NCF*
+    The framework is illustrated in the above figure.  
+    The total pipeline is: **Input Layer $\rightarrow$ Embedding Layer $\rightarrow$ Neural CF Layers $\rightarrow$ Output Layer**
+    1. *Learning NCF*
 2. Genealized Matrix Factorization(GMF)
 3. Multi-Layer Perceptron(MLP)
 4. Fusion of GMF and MLP
