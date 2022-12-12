@@ -19,7 +19,8 @@ on neural networks.
     where $P \in \mathbb{R}^{M \times K}$ and $Q \in \mathbb{R}^{N \times K}$, denoting the latent factor matrix for users and items, respectively; and $\Theta_{f}$ denotes the model parameters of the interaction function $f$.
     1. *Learning NCF*
         to learn model parameters, existing pointwise methods largely perform a regression with squared loss:
-        $$L_{sqr} = \sum_{(u,i) \in \mathcal{Y} \times Y}$$
+        $$L_{sqr} = \sum_{(u,i) \in \mathcal{Y} \times \mathcal{Y}^{-}}$$
+        where $\nmathcal{Y}$ denotes the set of observed interactions in **Y**, and $\mathcal{Y}^{-}$ denotes the set of negative instances, which can be all (or sampled from) unobserved interactions;
 2. Genealized Matrix Factorization(GMF)
 3. Multi-Layer Perceptron(MLP)
 4. Fusion of GMF and MLP
