@@ -79,7 +79,14 @@ or Probit function) as the activation function for the output layer. With the ab
 <img width="337" alt="image" src="https://user-images.githubusercontent.com/49403324/207031322-ad13f8b5-a6cc-4e87-acbe-daaf5f17cba5.png"><img width="339" alt="image" src="https://user-images.githubusercontent.com/49403324/207031367-64faaec4-1a0c-4eb9-bc81-ac6d3aed6a3d.png">
 
 
+**Conclusion**
+
+The paper explores neural network architectures for collaborative filtering. They devised a general framework NCF and proposed three instantiations — GMF, MLP and
+NeuMF — that model user–item interactions in different ways. The framework is simple and generic; it is not limited to the models presented in this paper, but is designed to serve as a guideline for developing deep learning methods for recommendation. 
+
+
 **Citation**
+
 ```
 @inproceedings{he2017neural,
   title={Neural collaborative filtering},
