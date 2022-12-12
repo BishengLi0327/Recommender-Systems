@@ -23,7 +23,9 @@ on neural networks.
         where $\mathcal{Y}$ denotes the set of observed interactions in **Y**, and $\mathcal{Y}^{-}$ denotes the set of negative instances, which can be all (or sampled from) unobserved interactions;  
         We can view the prediction score $\hat{y}\_{ui}$ as how likely $i$ is relevant to $u$. To endow NCF with such a probabilistic explanation, we need to constrain the output $\hat{y}\_{ui}$ in the range of $\[0, 1\]$, which can be easily achieved by using a probabilistic function (e.g., the Logistic
 or Probit function) as the activation function for the output layer. With the above setting, the likelihood function can be defined as:
-        $$P(\mathcal{Y}, \mathcal{Y}^{-}|\textbf(P), \textbf{Q}, \Theta_{f}) = \prod_{(u, i) \in \mathcal{Y}} $\hat{y}\_{ui}$ \prod_{(u, i) \in \mathcal{Y}^{-}} (1-$\hat{y}\_{ui}$)$$
+        $$P(\mathcal{Y}, \mathcal{Y}^{-}|\textbf(P), \textbf{Q}, \Theta_{f}) = \prod_{(u, i) \in \mathcal{Y}} \hat{y}\_{ui} \prod_{(u, i) \in \mathcal{Y}^{-}} (1-\hat{y}\_{ui})$$
+        Then the loss function can be formulated as:
+        $$L = - \sum_{(u, i) \in \mathcal{Y}} \log \hat{y}\_{ui}  - \sum_{(u, i) \in \mathcal{Y}^{-}} \log 1-\hat{y}\_{ui}  = - \sum_{(u, i) \in \mathcal{Y}\union \mathcal{Y}^{-}}$$
 2. Genealized Matrix Factorization(GMF)
 3. Multi-Layer Perceptron(MLP)
 4. Fusion of GMF and MLP
