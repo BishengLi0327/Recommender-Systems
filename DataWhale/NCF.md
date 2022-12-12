@@ -12,7 +12,7 @@ on neural networks.
 
 **Neural Collaborative Filtering**
 1. General Framework
-    1. *Learning NCF*
+  1. *Learning NCF*
 2. Genealized Matrix Factorization(GMF)
 3. Multi-Layer Perceptron(MLP)
 4. Fusion of GMF and MLP
