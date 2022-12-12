@@ -26,7 +26,7 @@ on neural networks.
 or Probit function) as the activation function for the output layer. With the above setting, the likelihood function can be defined as:
         $$P(\mathcal{Y}, \mathcal{Y}^{-}|\textbf(P), \textbf{Q}, \Theta_{f}) = \prod_{(u, i) \in \mathcal{Y}} \hat{y}\_{ui} \prod_{(u, i) \in \mathcal{Y}^{-}} (1-\hat{y}\_{ui})$$
         Then the loss function can be formulated as:
-        $$L = - \sum_{(u, i) \in \mathcal{Y}} \log \hat{y}\_{ui}  - \sum_{(u, i) \in \mathcal{Y}^{-}} \log 1-\hat{y}\_{ui}  = - \sum_{(u, i) \in \mathcal{Y} \cup \mathcal{Y}^{-}} y_{ui} \log \hat{y}\_{ui} + (1 - y_{ui}) \log (1 - \hat{y}\_{ui})$$
+        $$L = - \sum_{(u, i) \in \mathcal{Y}} \log \hat{y}\_{ui}  - \sum_{(u, i) \in \mathcal{Y}^{-}} \log (1-\hat{y}\_{ui})  = - \sum_{(u, i) \in \mathcal{Y} \cup \mathcal{Y}^{-}} y_{ui} \log \hat{y}\_{ui} + (1 - y_{ui}) \log (1 - \hat{y}\_{ui})$$
         
 2. Genealized Matrix Factorization(GMF)
     
