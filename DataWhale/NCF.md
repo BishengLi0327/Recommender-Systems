@@ -38,5 +38,7 @@ or Probit function) as the activation function for the output layer. With the ab
     $$Z_{1} = \Phi_{1}(p_{u}, q_{i})$$
     $$\Phi_{2}(z_{1}) = a_{2}(W^{T}\_{2}z_{1} + b_{2})$$
     $$\cdots \cdots$$
+    $$\Phi_{L}(z_{L-1}) = a_{L}(W_{L}^{T}z_{L-1} + b_{L})$$
+    $$\hat{y}\_{ui} = \sigma(h^{T} \Phi_{L}(z_{L-1}))$$
 
 4. Fusion of GMF and MLP
