@@ -40,6 +40,6 @@ or Probit function) as the activation function for the output layer. With the ab
     $$\cdots \cdots$$
     $$\phi_{L}(z_{L-1}) = a_{L}(W_{L}^{T}z_{L-1} + b_{L})$$
     $$\hat{y}\_{ui} = \sigma(h^{T} \phi_{L}(z_{L-1}))$$
-    where $W_{x}, b_{x} and a_{x}$ denote the weight matrix, bias vector and activation function for the x-th layer's perceptron.
+    where $W_{x}$, $b_{x}$ and $a_{x}$ denote the weight matrix, bias vector and activation function for the x-th layer's perceptron.
 
 4. Fusion of GMF and MLP
