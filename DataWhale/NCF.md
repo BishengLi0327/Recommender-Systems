@@ -76,6 +76,5 @@ or Probit function) as the activation function for the output layer. With the ab
 
 *RQ3*: Are deeper layers of hidden units helpful for learning from user–item interaction data?
 
-<img width="337" alt="image" src="https://user-images.githubusercontent.com/49403324/207031322-ad13f8b5-a6cc-4e87-acbe-daaf5f17cba5.png">
-<img width="339" alt="image" src="https://user-images.githubusercontent.com/49403324/207031367-64faaec4-1a0c-4eb9-bc81-ac6d3aed6a3d.png">
+<img width="337" alt="image" src="https://user-images.githubusercontent.com/49403324/207031322-ad13f8b5-a6cc-4e87-acbe-daaf5f17cba5.png"><img width="339" alt="image" src="https://user-images.githubusercontent.com/49403324/207031367-64faaec4-1a0c-4eb9-bc81-ac6d3aed6a3d.png">
 
