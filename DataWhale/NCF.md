@@ -49,4 +49,4 @@ or Probit function) as the activation function for the output layer. With the ab
     <img width="551" alt="image" src="https://user-images.githubusercontent.com/49403324/206997880-a3fd239a-8584-4797-9724-61cc6dbfa1a4.png">
     the formulation of which is given as:
     $$\phi^{GMF} = p_{u}^{G} \otimes q_{i}^{G}$$
-    $$\phi^{MLP} = a_{L}(W_{L}^{T}(a_{L-1}(\cdots a_{2}(W_{2}^{T} \[p_{u}^{M}^{T}, q_{i}^{M}^{T}\]^{T}))))$$
+    $$\phi^{MLP} = a_{L}(W_{L}^{T}(a_{L-1}(\cdots a_{2}(W_{2}^{T} \[(p_{u}^{M})^{T}, (q_{i}^{M})^{T}\]^{T}))))$$
