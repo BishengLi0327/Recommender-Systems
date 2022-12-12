@@ -27,5 +27,6 @@ or Probit function) as the activation function for the output layer. With the ab
         Then the loss function can be formulated as:
         $$L = - \sum_{(u, i) \in \mathcal{Y}} \log \hat{y}\_{ui}  - \sum_{(u, i) \in \mathcal{Y}^{-}} \log 1-\hat{y}\_{ui}  = - \sum_{(u, i) \in \mathcal{Y} \cup \mathcal{Y}^{-}} y_{ui} \log \hat{y}\_{ui} + (1 - y_{ui}) \log (1 - \hat{y}\_{ui})$$
 2. Genealized Matrix Factorization(GMF)
+    MF can be interpreted as a special case of NCF framework.
 3. Multi-Layer Perceptron(MLP)
 4. Fusion of GMF and MLP
