@@ -79,4 +79,3 @@ that are used for this task.
   journal={arXiv preprint arXiv:1511.06939},
   year={2015}
 }
-'''
