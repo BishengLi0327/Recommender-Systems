@@ -72,3 +72,11 @@ that are used for this task.
 
 
 **Citation**
+```
+@article{hidasi2015session,
+  title={Session-based recommendations with recurrent neural networks},
+  author={Hidasi, Bal{\'a}zs and Karatzoglou, Alexandros and Baltrunas, Linas and Tikk, Domonkos},
+  journal={arXiv preprint arXiv:1511.06939},
+  year={2015}
+}
+'''
