@@ -7,15 +7,16 @@ https://arxiv.org/pdf/1511.06939.pdf
 2. The approach also considers practical aspects of the task and introduces several modifications to the classific RNNs that make it viable for the specific problem.
 3. Experiments results on two datasets show marked improvements over widely used approaches.
 
-**GRU4Rec Framework**
-<img width="317" alt="image" src="https://user-images.githubusercontent.com/49403324/207802990-2afdce54-ac24-4659-98c7-f23d560d028c.png">
+**GRU4Rec Framework**  
+<img width="317" alt="image" src="https://user-images.githubusercontent.com/49403324/207802990-2afdce54-ac24-4659-98c7-f23d560d028c.png">  
 General architecture of the network. Processing of one event of the event stream at once.
 
 **GRU4Rec (Recommendations with RNNs)**
 
-1. Preliminaries
+1. Preliminaries  
     Recurrent neural networks:
         $$h_{t} = g(W x_{t} + U h_{t-1})$$
+        Where $g$ is a smooth and bounded function such as a logistic sigmoid function $x_{t}$ is the input of the unit at time $t$. An RNN outputs a probability                 distribution over the next element of the sequence, given its current state $h_{t}$.
 2. Customizing the GRU model
     1. Session-Parallel Mini-Batches
     2. Sampling on the output
