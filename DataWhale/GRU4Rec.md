@@ -49,6 +49,6 @@ General architecture of the network. Processing of one event of the event stream
         where $N_{S}$ is the sample size, $\hat{r}\_{s,k})$ is the score on item $k$ at the given point of the session, $i$ is the desired item and $j$ are the                 negative samples.
         
         **TOP1**:
-        $$L_{S} = \frac{1}{N_{S}}  \sum_{j=1}^{N_{S}} $$
+        $$L_{S} = \frac{1}{N_{S}}  \sum_{j=1}^{N_{S}} (\sigma (\hat{r}\_{s,j} - \hat{r}\_{s,i})) $$
         
 **Experiments**
