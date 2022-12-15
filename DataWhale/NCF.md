@@ -95,4 +95,4 @@ NeuMF — that model user–item interactions in different ways. The framework i
   pages={173--182},
   year={2017}
 }
-'''
+
