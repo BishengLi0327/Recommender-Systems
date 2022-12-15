@@ -17,6 +17,9 @@ General architecture of the network. Processing of one event of the event stream
     Recurrent neural networks:
         $$h_{t} = g(W x_{t} + U h_{t-1})$$
         Where $g$ is a smooth and bounded function such as a logistic sigmoid function $x_{t}$ is the input of the unit at time $t$. An RNN outputs a probability                 distribution over the next element of the sequence, given its current state $h_{t}$.
+    Gated Recurrent Unit (GRU):
+    ![image](https://user-images.githubusercontent.com/49403324/207804249-8b55d284-2a37-4361-bfbc-8274adb28071.png)
+    where $r_{t}$ is the reset gate and $z_{t}$ is the update data.
 2. Customizing the GRU model
     1. Session-Parallel Mini-Batches
     2. Sampling on the output
