@@ -20,15 +20,26 @@ General architecture of the network. Processing of one event of the event stream
         Where $g$ is a smooth and bounded function such as a logistic sigmoid function $x_{t}$ is the input of the unit at time $t$. An RNN outputs a probability                 distribution over the next element of the sequence, given its current state $h_{t}$.
         
     Gated Recurrent Unit (GRU):
-    ![image](https://user-images.githubusercontent.com/49403324/207804249-8b55d284-2a37-4361-bfbc-8274adb28071.png =400)
+    ![image](https://user-images.githubusercontent.com/49403324/207804249-8b55d284-2a37-4361-bfbc-8274adb28071.png)
     where $r_{t}$ is the reset gate and $z_{t}$ is the update data. The GRU is a more elaborate model of an RNN unit that aims at dealing with the vanishing gradient         problem. GRU gate essentially learn when and by how much to update the hidden state of the unit.
     
 2. Customizing the GRU model
-    1. Session-Parallel Mini-Batches
-        The general framework of GRU4Rec is illustrated in the above figure, which depicts the representation of a single event within a time series of events. 
 
-    3. Sampling on the output
-    4. Ranking Loss
+    The general framework of GRU4Rec is illustrated in the above figure, which depicts the representation of a single event within a time series of events. When           used in session-based recommendations, the input of the network is the actual state of the network is the actual state of the session while the output is the           item of the next event in the session.
+    
+    1. Session-Parallel Mini-Batches
+
+        Session-Parallel Mini-Batched are used to accelerate training.
+        First, we create an order for each session.  
+        Second, we used the first event of the first $X$ sessions to form the input of the first mini-batch . The second mini-batch is formed from the second events           and so on. If any of the sessions end, the next available session is put in its place.  
+        <img width="437" alt="image" src="https://user-images.githubusercontent.com/49403324/207808027-2c5ca456-a754-4b8f-bf10-de7cb4b48776.png">
+        
+    2. Sampling on the output
+        
+
+
+
+    3. Ranking Loss
 
 
 **Experiments**
