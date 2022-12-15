@@ -2,14 +2,17 @@
 https://arxiv.org/pdf/1511.06939.pdf
 ##### *ICLR 2016*
 
+
 **Main Contribution**:
 1. This paper applies recurrent neural networks (RNNs) on recommender systems domain. By modeling the session-based data, more accurate recommendations can be provided.
 2. The approach also considers practical aspects of the task and introduces several modifications to the classific RNNs that make it viable for the specific problem.
 3. Experiments results on two datasets show marked improvements over widely used approaches.
 
+
 **GRU4Rec Framework**  
 <img width="317" alt="image" src="https://user-images.githubusercontent.com/49403324/207802990-2afdce54-ac24-4659-98c7-f23d560d028c.png">  
 General architecture of the network. Processing of one event of the event stream at once.
+
 
 **GRU4Rec (Recommendations with RNNs)**
 
@@ -51,4 +54,21 @@ General architecture of the network. Processing of one event of the event stream
         **TOP1**:
         $$L_{S} = \frac{1}{N_{S}}  \sum_{j=1}^{N_{S}} (\sigma (\hat{r}\_{s,j} - \hat{r}\_{s,i}) + \sigma (\hat{r}\_{s,j}^{2})) $$
         
+
 **Experiments**
+1. Baseline Results:
+
+     <img width="399" alt="image" src="https://user-images.githubusercontent.com/49403324/207811710-680ab673-9e56-4e5f-a895-9c10b0c1eb15.png">
+     
+2. GRU4Rec Results
+
+    <img width="630" alt="image" src="https://user-images.githubusercontent.com/49403324/207811823-002929b5-0317-4cbd-b9d6-fb488fa4cde0.png">
+
+
+**Conclusion**
+
+This paper applied a kind of modern recurrent neural network (GRU) to new application domain: recommender systems. They chose the task of session based recommendations, because it is a practically important area, but not well researched. They modified the basic GRU in order to fit the task better by introducing session-parallel mini-batches, mini-batch based output sampling and ranking loss function and showed that the method can significantly outperform popular baselines
+that are used for this task.
+
+
+**Citation**
