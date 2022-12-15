@@ -20,13 +20,15 @@ General architecture of the network. Processing of one event of the event stream
         Where $g$ is a smooth and bounded function such as a logistic sigmoid function $x_{t}$ is the input of the unit at time $t$. An RNN outputs a probability                 distribution over the next element of the sequence, given its current state $h_{t}$.
         
     Gated Recurrent Unit (GRU):
-    ![image](https://user-images.githubusercontent.com/49403324/207804249-8b55d284-2a37-4361-bfbc-8274adb28071.png)
+    ![image](https://user-images.githubusercontent.com/49403324/207804249-8b55d284-2a37-4361-bfbc-8274adb28071.png=400)
     where $r_{t}$ is the reset gate and $z_{t}$ is the update data. The GRU is a more elaborate model of an RNN unit that aims at dealing with the vanishing gradient         problem. GRU gate essentially learn when and by how much to update the hidden state of the unit.
     
 2. Customizing the GRU model
     1. Session-Parallel Mini-Batches
-    2. Sampling on the output
-    3. Ranking Loss
+        The general framework of GRU4Rec is illustrated in the above figure, which depicts the representation of a single event within a time series of events. 
+
+    3. Sampling on the output
+    4. Ranking Loss
 
 
 **Experiments**
