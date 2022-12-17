@@ -1,4 +1,4 @@
-# Session-Based Recommendation with Recurrent Neural Networks(GRU4Rec)
+# Session-Based Recommendation with Recurrent Neural Networks(GRU4REC)
 https://arxiv.org/pdf/1511.06939.pdf
 ##### *ICLR 2016*
 
