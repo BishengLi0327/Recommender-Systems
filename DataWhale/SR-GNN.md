@@ -29,6 +29,13 @@ https://arxiv.org/abs/1511.06939
 
 3. Learning Item Embeddings on Session Graphs
 
+    Graph neural networks are well suited for session-based recommendation, because it can automatically extract features of session graphs with consideration of rich node connections. The learning process of node vectors in a session graph can be demonstrated as follows: (take node $v_{s,i}$ for example)
+        
+    <img width="287" alt="image" src="https://user-images.githubusercontent.com/49403324/208233480-1ac1f223-eed2-4a37-809b-6ff0f264da77.png">
+
+    where $\textbf{H} \in \mathbb{R}^{d \times 2d}$ controls the weight, $z_{s,i}$ and $r_{s,i}$ are the reset and update gates respectively, $\[v_{1}^{t-1}, \cdots, v_{n}^{t-1}\]$ is the list of node vectors in session $s$, $\sigma(\cdot)$ is the sigmoid function, and $\otimes$ is the element-wise multiplication operator. $v_{i}\in \mathbb{R}^{d}$ represents the latent vector of node $v_{s,i}$. The connection matrix $A_{s} \in \mathbb{R}^{n \times 2n}$ determines how nodes in the graph communicate with each other and $A_{s,i:} \in \mathbb{R}^{1 \times 2n}$ are the two columns of blocks in $A_{s}$ corresponding to node $v_{s, i}$.
+    
+    <img width="439" alt="image" src="https://user-images.githubusercontent.com/49403324/208234037-93af3ed2-799f-4e0d-90d9-3d6fa8ebae11.png">
 
 4. Generate Session Embeddings
 
