@@ -20,6 +20,7 @@ https://arxiv.org/abs/1511.06939
 1. Notations
 
 	Session-based recommendation aims to predict which item a user will click next, solely based on the user’s current sequential session data without accessing to the 	long-term preference profile.
+	
 	|$V = {v_{1}, v_{2}, \cdots, v_{m}}$| the set consisting of all unique items ionvolved in all sessions|
 	|$s = \[v_{s, 1}, v_{s, 2}, \cdots, v_{s, n}}\]$|an anonymous session sequence s ordered by timestamps|
 	|$v_{s, n+1}$|next click (sequence label)|
