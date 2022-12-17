@@ -2,7 +2,6 @@
 
 https://arxiv.org/abs/1511.06939
 
-*AAAI 2019*
+##### *2019 AAAI*
 
-1. Main COntributions
-
+**Main Contributions**:
