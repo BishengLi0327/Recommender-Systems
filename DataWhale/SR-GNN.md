@@ -23,6 +23,7 @@ https://arxiv.org/abs/1511.06939
   
 2. Constructing Session Graphs
 
+$\mathcal{E}\_{s}$
 
 3. Learning Item Embeddings on Session Graphs
 
