@@ -33,11 +33,25 @@ https://arxiv.org/abs/1511.06939
         
     <img width="287" alt="image" src="https://user-images.githubusercontent.com/49403324/208233480-1ac1f223-eed2-4a37-809b-6ff0f264da77.png">
 
-    where $\textbf{H} \in \mathbb{R}^{d \times 2d}$ controls the weight, $z_{s,i}$ and $r_{s,i}$ are the reset and update gates respectively, $\[v_{1}^{t-1}, \cdots, v_{n}^{t-1}\]$ is the list of node vectors in session $s$, $\sigma(\cdot)$ is the sigmoid function, and $\otimes$ is the element-wise multiplication operator. $v_{i}\in \mathbb{R}^{d}$ represents the latent vector of node $v_{s,i}$. The connection matrix $A_{s} \in \mathbb{R}^{n \times 2n}$ determines how nodes in the graph communicate with each other and $A_{s,i:} \in \mathbb{R}^{1 \times 2n}$ are the two columns of blocks in $A_{s}$ corresponding to node $v_{s, i}$.
+    where $\textbf{H} \in \mathbb{R}^{d \times 2d}$ controls the weight, $z_{s,i}$ and $r_{s,i}$ are the reset and update gates respectively, $\[v_{1}^{t-1}, \cdots,       v_{n}^{t-1}\]$ is the list of node vectors in session $s$, $\sigma(\cdot)$ is the sigmoid function, and $\otimes$ is the element-wise multiplication operator.         $v_{i}\in \mathbb{R}^{d}$ represents the latent vector of node $v_{s,i}$. The connection matrix $A_{s} \in \mathbb{R}^{n \times 2n}$ determines how nodes in the       graph communicate with each other and $A_{s,i:} \in \mathbb{R}^{1 \times 2n}$ are the two columns of blocks in $A_{s}$ corresponding to node $v_{s, i}$.
     
     <img width="439" alt="image" src="https://user-images.githubusercontent.com/49403324/208234037-93af3ed2-799f-4e0d-90d9-3d6fa8ebae11.png">
 
 4. Generate Session Embeddings
+
+    SR-GNN represents a session directly by nodes involved in that session. To better predict the user's next clicks, SR-GNN develop a strategy to combine long-term       preference and current interests of the session, and use the combined embedding as the session embedding.
+    
+    For session $s = \[v_{s,1}, v_{s,2}, \cdots, v_{s,n}\]$, we consider the lcoal embedding $s_{l}$ and global embedding $s_{g}$ from the node vectors obtained from the last step:
+    
+    **Local Embedding**:
+    $$s_{l} = v_{n}$$
+    
+    **Global Embedding**:
+    $$\alpha_{i} = q^{T} \sigma (W_{1} v_{n} + W_{2} v_{i} + c)$$
+    $$s_{g} = \sum_{i=1}^{n} \alpha_{i} v_{i}$$
+    
+    the hybrid embedding $s_{h}$ can be computed by taking linear transformation over the concatenation of the lcoal and global embedding vectors:
+    $$s_{h} = W_{3}\[s_{l}; s_{g}\]$$
 
 
 5. Making Recommendation and Model Training
