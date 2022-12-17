@@ -22,6 +22,7 @@ https://arxiv.org/abs/1511.06939
     Session-based recommendation aims to predict which item a user will click next, solely based on the user’s current sequential session data without accessing to the 	long-term preference profile.
     
     |a|b|
+    |---|---|
     |c|d|
   
 2. Constructing Session Graphs
