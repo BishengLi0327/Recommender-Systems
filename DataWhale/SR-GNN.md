@@ -4,4 +4,33 @@ https://arxiv.org/abs/1511.06939
 
 ##### *2019 AAAI*
 
-**Main Contributions**:
+**Main Contributions**
+
+1. SR-GNN models seperated session sequences into graph-strutured data and use graph neural networks  to capture complex item transitions. SR-GNN presents a noval perspective on modeling in the session-based recommendation scenario.
+2. SR-GNN doesn't rely on user representations, but uses the session embedding to generate session-based recommendations, the session embedding can be obtained merely based on latent vectors of items involved in each single session.
+
+
+**SR-GNN Framework**
+
+<img width="801" alt="image" src="https://user-images.githubusercontent.com/49403324/208231350-c78cc9e3-da88-4f18-8ede-06c00c39fa19.png">
+
+
+**SR-GNN**
+
+1. Notations
+
+
+2. Constructing Session Graphs
+
+
+3. Learning Item Embeddings on Session Graphs
+
+
+4. Generate Session Embeddings
+
+
+5. Making Recommendation and Model Training
+
+
+
+**Experiments**
