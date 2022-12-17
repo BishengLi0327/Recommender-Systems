@@ -56,6 +56,14 @@ https://arxiv.org/abs/1511.06939
 
 5. Making Recommendation and Model Training
 
+    After obtained the embedding of each session, we compute the score $\hat{z}\_{i}$ for candidate item $v_{i} \in V$ by multiplying its embedding $v_{i}$ by session representation $s_{h}$:
+    $$\hat{z}\_{i} = s_{h}^{T} v_{i}$$
+    
+    the softmax function is applied to get the output vector of the model $\hat{y}$:
+    $$\hat{y} = softmax(\hat{z})$$
+    
+    For the session graph, the loss function is defined as the cross-entropy of the prediction and the ground truth.
+    $$\mathcal{L}(\hat{y}) = - \sum_{i=1}^{m} y_{i} \log (\hat{y}\_{i}) + (1 - y_{i}) \log (1 - \hat{y}\_{i})$$
 
 
 **Experiments**
