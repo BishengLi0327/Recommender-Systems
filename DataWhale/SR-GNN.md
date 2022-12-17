@@ -67,3 +67,29 @@ https://arxiv.org/abs/1511.06939
 
 
 **Experiments**
+
+1. The performance of SR-GNN with other baseline methods over three datasets.
+
+    <img width="374" alt="image" src="https://user-images.githubusercontent.com/49403324/208234794-36e49817-cd3a-4824-a63d-179ec76a77af.png">
+    
+2.  Different Connection Schemes and Different Session Embeddings.
+
+    <img width="379" alt="image" src="https://user-images.githubusercontent.com/49403324/208234857-ade5dc59-50d9-426a-85fb-3f5a222c61e7.png">
+
+3. Analysis on Session Sequence Lengths.
+
+    <img width="291" alt="image" src="https://user-images.githubusercontent.com/49403324/208234881-62ebaa71-b281-4409-ac8d-e0eee287c9c0.png">
+
+
+**Citation**
+
+```
+@inproceedings{wu2019session,
+  title={Session-based recommendation with graph neural networks},
+  author={Wu, Shu and Tang, Yuyuan and Zhu, Yanqiao and Wang, Liang and Xie, Xing and Tan, Tieniu},
+  booktitle={Proceedings of the AAAI conference on artificial intelligence},
+  volume={33},
+  number={01},
+  pages={346--353},
+  year={2019}
+}
