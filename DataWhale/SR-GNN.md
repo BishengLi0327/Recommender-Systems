@@ -24,6 +24,9 @@ https://arxiv.org/abs/1511.06939
     |Notation|Meaning|
     |---|---|
     |$V = {v_{1}, v_{2}, \cdots}, v_{m}$| set consisting of all unique items involved in all the sessions |
+    |$s = \[v_{s,1}, v_{s,2}, \cdots, v_{s,n}\]$| anonymous session sequence ordered by timestamp |
+    |$v_{s,n+1}$| next click |
+    |$\hat{y}$| output probability |
   
 2. Constructing Session Graphs
 
