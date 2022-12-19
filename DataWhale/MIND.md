@@ -60,6 +60,15 @@ represent user interests for either stage.
         
         Finally, a non-linear "squash" function is applied to obtain the vectors of high-level capsules as
         $$\vec{c}\_{j}^{h} = squash(\vec{z}\_{j}^{h}) = \frac{||\vec{z}\_{j}^{h}||^2}{1 + ||\vec{z}\_{j}^{h}||^2} \frac{\vec{z}\_{j}^{h}}{||\vec{z}\_{j}^{h}||}$$
+        
+    2. B2I Dynamic Routing
+
+         The original routing algorithm proposed for image data is not directly applicable for processing user behavior data. So, we propose Behavior-to-Interest (B2I) dynamic routing for adaptively aggregating user’s behaviors into interest representation vectors, and it differs from original routing algorithm in three aspects.
+         
+         1. *Shared bilinear mapping matrix*.
+
+            $$b_{ij} = \vec{u}\_{j}^{T} S \vec{e}\_{i}, \qquad i \in \mathcal{I}_{u}, j \in {1, \cdots, K}$$
+            where 
 
 
 4. Label-aware Attention Layer
