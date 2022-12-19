@@ -88,6 +88,11 @@ https://arxiv.org/abs/1511.06939
     <img width="291" alt="image" src="https://user-images.githubusercontent.com/49403324/208234881-62ebaa71-b281-4409-ac8d-e0eee287c9c0.png">
 
 
+**Conclusion**
+
+Session-based recommendation is indispensable where users’ preference and historical records are hard to obtain. This paper presents a novel architecture for session-based recommendation that incorporates graph models into representing session sequences. The proposed method not only considers the complex structure and transitions between items of session sequences, but also develops a strategy to combine long-term preferences and current interests of sessions to better predict users’ next actions.
+
+
 **Citation**
 
 ```
