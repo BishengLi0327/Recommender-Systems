@@ -97,10 +97,11 @@ represent user interests for either stage.
 5. Training & Serving
 
     With the user vector $\vec{v}\_{u}$ and the label item embedding $\vec{e}\_{i}$ ready, the probability of user $u$ interacting with item $i$ as
-    $$Pr(i|u) = Pr(\vec{e}\_{i}|\vec{v}\_{u}) = \frac{\exp (\vec{v}\_{u}^{T} \vec{e}\_{i})}{\sum_{j in \mathcal{I}} \exp (\vec{v}\_{u}^{T} \vec{e}\_{j})}$$
-
-
-6. Connections with Existing Methods
+    $$Pr(i|u) = Pr(\vec{e}\_{i}|\vec{v}\_{u}) = \frac{\exp (\vec{v}\_{u}^{T} \vec{e}\_{i})}{\sum_{j \in \mathcal{I}} \exp (\vec{v}\_{u}^{T} \vec{e}\_{j})}$$
+    
+    Then, the overall objective function for training MIND is
+    $$L = \sum_{(u,i) \in \mathcal{D}} \log Pr(i | u)$$
+    where $D$ is the collections of training data conmtaining user-item interactions.
 
 
 **Experiments**
