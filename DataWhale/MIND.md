@@ -2,6 +2,8 @@
 
 https://arxiv.org/abs/1904.08030
 
+#### *International Conference on Information and Knowledge Management 2019*
+
 **Main Contribution**:
 
 1. To capture diverse intertests of users from user behaviour, this paper designed the multi-interest extractor layer, which utilizes dynamic routing to adaptively aggregate user's historial behaviours into user representation vectors.
@@ -106,3 +108,27 @@ represent user interests for either stage.
 
 **Experiments**
 
+1. Offline Evaluation
+
+    <img width="771" alt="image" src="https://user-images.githubusercontent.com/49403324/208407648-5d52cf66-6a6e-4c45-91f3-4f604a5ba068.png">
+
+2. Online Experiments
+
+    <img width="385" alt="image" src="https://user-images.githubusercontent.com/49403324/208407812-32e6e8a3-ee7d-4161-ab76-11dd2bf6850d.png">
+
+
+**Conslusion**
+
+This paper proposes a new structure of neural network, namely Multi-Interest Network with Dynamic routing (MIND), to represent user’s diverse interests for the matching stage in e-commerce recommendation, which involves billion scale users and items. Specifically, MIND designs a multi-interest extractor layer with a variant dynamic routing to extract user’s diverse interests and these interests are then trained with a novel label-aware attention scheme. Offline experiments are conducted to demonstrate that MIND achieves superior performance on public benchmarks. Online CTRs are also reported to demonstrate the effectiveness and feasibility of MIND
+at Tmall’s live production.
+
+
+**Citation**
+```
+@inproceedings{li2019multi,
+  title={Multi-interest network with dynamic routing for recommendation at Tmall},
+  author={Li, Chao and Liu, Zhiyuan and Wu, Mengmeng and Xu, Yuchi and Zhao, Huan and Huang, Pipei and Kang, Guoliang and Chen, Qiwei and Li, Wei and Lee, Dik Lun},
+  booktitle={Proceedings of the 28th ACM International Conference on Information and Knowledge Management},
+  pages={2615--2623},
+  year={2019}
+}
