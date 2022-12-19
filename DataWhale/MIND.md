@@ -65,11 +65,18 @@ represent user interests for either stage.
 
          The original routing algorithm proposed for image data is not directly applicable for processing user behavior data. So, we propose Behavior-to-Interest (B2I) dynamic routing for adaptively aggregating user’s behaviors into interest representation vectors, and it differs from original routing algorithm in three aspects.
          
-         1. *Shared bilinear mapping matrix*.
+        1. *Shared bilinear mapping matrix*
 
             $$b_{ij} = \vec{u}\_{j}^{T} S \vec{e}\_{i}, \qquad i \in \mathcal{I}_{u}, j \in {1, \cdots, K}$$
-            where 
+            where $\vec{e}\_{i} \in \mathbb{R}^{d}$ denotes the embedding of behaviour item $i$, $\vec{u}\_{j} \in \mathbb{R}^{d}$ the vector of interest capsure $j$. The bilinear mapping matrix $S \in \mathbb{R}^{d \times d}$ is shared across each pair of behaviour capsures and interest capsures.
+         
+        2. *Randomly initialized routing logits*
 
+            Owing to the use of shared bilinear mapping matrix S, initializing routing logits to zeros will lead to the same initial interest capsules. To mitigate this phenomenon, we sample a random matrix from gaussian distribution $N(0, \sigma^2)$ for initial routing logits to make initial interest capsules differ from each other.
+        
+        3. Dynamic interest number
+
+            $$K_{u}^{'} = \max(1, \min(K, \log_{2}(|\mathcal{I}_{u}|)))$$
 
 4. Label-aware Attention Layer
 
