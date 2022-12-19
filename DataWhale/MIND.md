@@ -79,14 +79,19 @@ represent user interests for either stage.
             $$K_{u}^{'} = \max(1, \min(K, \log_{2}(|\mathcal{I}_{u}|)))$$
         
     
-    The whole dynamic routing procedure is listed in the following algorithm:
+    **The whole dynamic routing procedure is listed in the following algorithm**:
     
     <img width="396" alt="image" src="https://user-images.githubusercontent.com/49403324/208393217-f84e73d8-49f1-4859-9895-9dc2d47d2919.png">
 
 
 4. Label-aware Attention Layer
 
+    Several interest capsules are generated from user’s behavior embeddings through multi-interest extractor layer. Different interest capsules represent different aspects of user interests, and the relevant interest capsule is used for evaluating user’s preference on specific items. Therefore, during training, we design a label-aware attention layer based on scaled dot-product attention to make the target item choose which interest capsule is used.
     
+    $$\vec{v}\_{u} = Attention(\vec{e}\_{i}, V_{u}, V_{u}) = V_{u} softmax(pow(V_{u}^{T}\vec{e}\_{i}, p))$$
+    where $pow$ denotes element-wise exponentiation operator, $p$ a tunable parameter for adjusting the attention distribution.
+    
+    <img width="142" alt="image" src="https://user-images.githubusercontent.com/49403324/208394359-1e5ebaff-a37c-4b75-8e4d-ad06b6946690.png">
 
 
 5. Training & Serving
