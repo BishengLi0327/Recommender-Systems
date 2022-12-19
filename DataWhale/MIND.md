@@ -38,9 +38,10 @@ represent user interests for either stage.
 
     As shown in the above frameworkm, the input of MIND consisits three of three groups
     
-        - user profile $\mathcal{P}\_{u}$
-        - user behaviour $\mathcal{I}\_{u}$
-        - label item $\mathcal{F}\_{i}$
+        - First item
+        - Second item
+        - Third item
+        - Fourth item
 
     Each group contains several categorical id features, and these features are of extremely high dimensionality, MIND adopt the widely used embedding techinque to embed these id features into low-dimension dense vectors. 
 
