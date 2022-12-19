@@ -45,7 +45,21 @@ represent user interests for either stage.
 
 3. Multi-Interest Extractor Layer
 
+    Representing user interests by one representation vector can be the bottleneck for capturing diverse interests of users, because we have to compress all information related with diverse interests of users into one representation vector. Instead, in MIND we use multiple representation vectors to express distinct interests of users seperately. By this way, diverse interests of users are considered seperately in the matching stage, enabling more accurate item retrieve for every aspect of interest. In MIND, we design the multi-interest extractor layer for clustering historical behaviours and inferring representation vectors for resulted clusters.
     
+    1. Dynamic Routing Revisit
+
+        The goal of dynamic routing is to compute the values of high-level capsules given the values of low-level capsules in an iterative way. In each iteration, given low-level capsures $i \in {1, \cdots, m}$ with corresponding vectors $\vec{c}\_{i}^{l} \in \mathbb{R}^{N_{l} \times 1}$, $i \in {1, \cdots, m}$ and high level capsures $j \in {1, \cdots, n}$ with corresponding vectors $\vec{c}\_{j}^{h} \in \mathbb{R}^{N_{h} \times 1}$, $j \in {1, \cdots, n}$, the routing logit $b_{ij}$ between low-level capsure $i$ and high-level capsure $j$ is computed by
+        $$b_{ij} = (\vec{c}\_{j}^{h})^{T} S_{ij} \vec{c}\_{i}^{l}$$
+        where $S_{ij} \in \mathbb{N_{h} \times N_{l}}$ is the bilinear mapping matrix to be learned.
+        
+        With routing logits calculated, the candidate vector for high-level capsule $j$ is computed as weighted sum of all low-level capsules
+        $$\vec{z}\_{j}^{h} = \sum_{i=1}^{m} w_{ij} S_{ij} \vec{c}\_{i}^{l}$$
+        where $w_{ij}$ denotes the weight for connecting low-level capsule $i$ and high-level capsule $j$ and is calculated by performing softmax on routing logits as
+        $$w_{ij} = \frac{\exp b_{ij}}{\sum_{k=1}^{m} \exp b_{ik}}$$
+        
+        Finally, a non-linear "squash" function is applied to obtain the vectors of high-level capsules as
+        $$\vec{c}\_{j}^{h} = squash(\vec{z}\_{j}^{h}) = \frac{||\vec{z}\_{j}^{h}||^2}{1 + ||\vec{z}\_{j}^{h}||^2} \frac{\vec{z}\_{j}^{h}}{||\vec{z}\_{j}^{h}||}$$
 
 
 4. Label-aware Attention Layer
