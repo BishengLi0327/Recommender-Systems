@@ -56,7 +56,7 @@ represent user interests for either stage.
         With routing logits calculated, the candidate vector for high-level capsule $j$ is computed as weighted sum of all low-level capsules
         $$\vec{z}\_{j}^{h} = \sum_{i=1}^{m} w_{ij} S_{ij} \vec{c}\_{i}^{l}$$
         where $w_{ij}$ denotes the weight for connecting low-level capsule $i$ and high-level capsule $j$ and is calculated by performing softmax on routing logits as
-        $$w_{ij} = \frac{\exp b_{ij}}{\sum^{m}\_{k=1} \exp b_{ik}}$$
+        $$w_{ij} = \frac{\exp b_{ij}}{\sum_{k} \exp b_{ik}}$$
         
         Finally, a non-linear "squash" function is applied to obtain the vectors of high-level capsules as
         $$\vec{c}\_{j}^{h} = squash(\vec{z}\_{j}^{h}) = \frac{||\vec{z}\_{j}^{h}||^2}{1 + ||\vec{z}\_{j}^{h}||^2} \frac{\vec{z}\_{j}^{h}}{||\vec{z}\_{j}^{h}||}$$
