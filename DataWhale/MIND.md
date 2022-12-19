@@ -72,13 +72,21 @@ represent user interests for either stage.
          
         2. *Randomly initialized routing logits*
 
-            Owing to the use of shared bilinear mapping matrix S, initializing routing logits to zeros will lead to the same initial interest capsules. To mitigate this phenomenon, we sample a random matrix from gaussian distribution $N(0, \sigma^2)$ for initial routing logits to make initial interest capsules differ from each other.
+            Owing to the use of shared bilinear mapping matrix $S$, initializing routing logits to zeros will lead to the same initial interest capsules. To mitigate this phenomenon, we sample a random matrix from gaussian distribution $N(0, \sigma^2)$ for initial routing logits to make initial interest capsules differ from each other.
         
         3. Dynamic interest number
 
             $$K_{u}^{'} = \max(1, \min(K, \log_{2}(|\mathcal{I}_{u}|)))$$
+        
+    
+    The whole dynamic routing procedure is listed in the following algorithm:
+    
+    <img width="396" alt="image" src="https://user-images.githubusercontent.com/49403324/208393217-f84e73d8-49f1-4859-9895-9dc2d47d2919.png">
+
 
 4. Label-aware Attention Layer
+
+    
 
 
 5. Training & Serving
