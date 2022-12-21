@@ -80,8 +80,19 @@ $N$ items such that a pre-defined value function is maximized. Our framework use
 
 **Experiments**
 
+<img width="774" alt="image" src="https://user-images.githubusercontent.com/49403324/208804388-9bc71f16-cff5-425f-bb8c-638d0b1dbb22.png">
+
 
 **Conclusion**
 
+In this paper, we propose a novel controllable multi-interest framework for the sequential recommendation. Our framework uses a multi-interest extraction module to generate multiple user interests and uses an aggregation module to obtain the overall top-N items.
 
 **Citation**
+```
+@inproceedings{cen2020controllable,
+  title={Controllable multi-interest framework for recommendation},
+  author={Cen, Yukuo and Zhang, Jianwei and Zou, Xu and Zhou, Chang and Yang, Hongxia and Tang, Jie},
+  booktitle={Proceedings of the 26th ACM SIGKDD International Conference on Knowledge Discovery \& Data Mining},
+  pages={2942--2951},
+  year={2020}
+}
