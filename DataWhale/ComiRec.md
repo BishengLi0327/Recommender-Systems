@@ -15,9 +15,12 @@ https://arxiv.org/abs/2005.09347
 
 <img width="708" alt="image" src="https://user-images.githubusercontent.com/49403324/208796761-28905125-6b25-48b8-9599-56c80f4ebb0c.png">
 
-A motivating example of our proposed framework. An e-commerce platform user, Emma, has multiple interests including jewelry, handbags, and make-ups. Our multi-interest extraction module can capture these three interests from her click sequence. Each interest retrieves items from the large-scale item pool based on the interest embedding independently. An aggregation module combines items from different interests and outputs the overall top-N recommended items for Emma
+A motivating example of our proposed framework. An e-commerce platform user, Emma, has multiple interests including jewelry, handbags, and make-ups. Our multi-interest extraction module can capture these three interests from her click sequence. Each interest retrieves items from the large-scale item pool based on the interest embedding independently. An aggregation module combines items from different interests and outputs the overall top-N recommended items for Emma.
+
 
 **ComiRec Framework**
+
+<img width="632" alt="image" src="https://user-images.githubusercontent.com/49403324/208796910-dddbccef-5d46-4f39-935b-f11c84de600d.png">
 
 
 **ComiRec**
