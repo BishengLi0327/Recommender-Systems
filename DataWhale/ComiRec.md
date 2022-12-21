@@ -59,7 +59,24 @@ A motivating example of our proposed framework. An e-commerce platform user, Emm
 
     3. ***Model Training***
 
+        $$v_{u} = V_{u}\[:, argmax(V_{u}^{T} e_{i})\]$$
+        $$P_{\theta}(i|u) = \frac{\exp (v_{u}^{T})}{\sum_{k \in \mathcal{I}} \exp (v_{u}^{T} e_{k})}$$
+        $$loss = \sum_{u \in \mathcal{U}} \sum_{i \in \mathcal{I}\_{u}} - \log P_{\theta} (i|u)$$
+
 3. Aggregation Modules
+
+    After the multi-interest extraction module, we obtain multiple interest embeddings for each user based on his/her past behavior. Each interest embedding can independently retrieve top-N items based on the inner production proximity. A basic and straightforward way to aggregate the items to obtain the top-N items is to merge and filter the items based on their inner production proximity with user interests, which can be formalized as
+    $$f(u, i) = max_{1 \leq k \leq K} (e_{i}^{T} v_{u}^{(k)})$$
+    However, it is not all about the accuracy of current recommender systems. People are more likely to be recommended with something new or something diverse. The
+problem can be formulated in the following. Given a set $\mathcal{M}$ with $K \cdot N$ items retrieved from $K$ interests of a user $u$, find a set $\mathcal{S}$ with
+$N$ items such that a pre-defined value function is maximized. Our framework uses a controllable procedure to solve this problem. We use the following value function $Q(u, S)$ to balance the accuracy and diversity of the recommendation by a controllable factor $\lambda \geq 0$,
+    $$Q(u, S) = \sum_{i \in \mathcal{S}} f(u, i) + \lambda \sum_{i \in \mathcal{S}} \sum_{j \in \mathcal{S}} g(i, j)$$
+    Here $g(i, j)$ is a diversity or dissimilarity function such as
+    $$g(i, j) = \delta(CATE(i) \neq CATE(j))$$
+    
+    The greedy inference algorithm to approximately maximize the value function $Q(u, S)$, which is listed in the following
+    <img width="387" alt="image" src="https://user-images.githubusercontent.com/49403324/208804303-27042e2e-d840-4f6c-ac30-785a901b1415.png">
+
 
 **Experiments**
 
