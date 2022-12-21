@@ -37,10 +37,27 @@ A motivating example of our proposed framework. An e-commerce platform user, Emm
 
     1. ***Dynamic Routing***
 
+        Using dynamic routing, the item embeddings of the user sequences can be viewed as primary capsures, and the multiple user interests can be seen as the interest capsules. Let $e_{i}$ be the capsule $i$ of the primary layer. We then give the computation of the capsule $j$ of the next layer based on primary capsules.
         
+        1. First compute the prediction vector as
+            $$\hat{e}\_{j|i} = W_{ij} e_{i}$$
+        2. Then the total input to the capsule $j$ is the weighted sum over all prediction vecotrs $\hat{e}\_{j|i}$ as
+            $$s_{j} = \sum_{i} c_{ij} \hat{e}\_{j|i}$$
+        3. $c_{ij}$ are the coupling coefficients determined by the iterative dyunamic routing process as
+            $$c_{ij} \frac{\exp (b_{ij})}{\sum_{k} \exp (b_{ik})}$$
+        4. Finally, the vector of capsule $j$ is computed by
+            $$v_{j} = squash(s_{j}) = \frac{||s_{j}||^{2}}{1 + ||s_{j}||^{2}} \frac{s_{j}}{||s_{j}||}$$
         
-    3. ***Self-Attentive Method***
-    4. ***Model Training***
+        The output interest capsules of the user $u$ are then formed as a matrix $V_{u} = \[v_{1}, \cdots, v_{K}\] \in \mathbb{R}^{d \times K}$.
+        
+    2. ***Self-Attentive Method***
+
+        Given the embeddings of user behaviours, $H \in \mathbb{R}^{d \times n}$, we use the self-attention mechanism to obtain a matrix of weights:
+        $$A = softmax(W_{2}^{T} tanh(W_{1}H))^{T}$$
+        The final matrix of user interests $V_{u}$ can be computed by
+        $$V_{u} = HA$$
+
+    3. ***Model Training***
 
 3. Aggregation Modules
 
