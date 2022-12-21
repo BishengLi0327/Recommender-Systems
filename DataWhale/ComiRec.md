@@ -25,6 +25,24 @@ A motivating example of our proposed framework. An e-commerce platform user, Emm
 
 **ComiRec**
 
+1. Problem Formulation
+
+    Assume we have a set of users $u \in \mathcal{U}$ and a set of items $i \in \mathcal{I}$. For each user, we have a sequence of user historical bahaviours $(e_{1}^{u}, e_{2}^{u}, \cdots, e_{n}^{u})$, sorted by time of occurrence. Given historical occurrence interactrions, the problem of *sequence recommendation* is to predict the next items that the user might be interacted with.
+    
+    <img width="392" alt="image" src="https://user-images.githubusercontent.com/49403324/208798539-10a47d0a-f046-4dba-8811-46986252e543.png">
+
+2. Multi-Interest Framework
+
+    Most of existing mathcing models only generate a single embedding vector for each user. This suffers from the lack of expressiveness of a single embedding since real-world customers usually have several kinds of items in their minds and these items are often for different uses and vary a lot in categories. Such behaviors of real-world customers highlight the need to use multiple vectors to represent their multiple interests. In this paper, we explore two methods, dynamic routing method and self-attentive method, as our multi-interest extraction module.
+
+    1. ***Dynamic Routing***
+
+        
+        
+    3. ***Self-Attentive Method***
+    4. ***Model Training***
+
+3. Aggregation Modules
 
 **Experiments**
 
